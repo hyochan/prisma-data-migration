@@ -1,0 +1,39 @@
+{
+  "name": "prisma-data-migration",
+  "version": "1.0.0",
+  "description": "Migrate database from one to another.",
+  "main": "src/index.ts",
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "lint": "eslint --ext .ts src",
+    "tsc": "tsc",
+    "postinstall": "yarn prisma:db-pull:old && yarn prisma:db-pull && yarn prisma:generate:old && yarn prisma:generate",
+    "prisma:db-pull:old": "prisma db pull --schema prisma/schema_old.prisma",
+    "prisma:db-pull": "prisma db pull --schema prisma/schema.prisma",
+    "prisma:generate:old": "prisma generate --schema prisma/schema_old.prisma",
+    "prisma:generate": "prisma generate --schema prisma/schema.prisma"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/hyochan/prisma-data-migration"
+  },
+  "keywords": [
+    "prisma",
+    "migration",
+    "data"
+  ],
+  "author": "hyochan",
+  "license": "MIT",
+  "dependencies": {
+    "@prisma/client": "^4.11.0"
+  },
+  "devDependencies": {
+    "@dooboo/eslint-config-node": "^1.0.4",
+    "@types/node": "^18.14.6",
+    "eslint": "^8.35.0",
+    "prettier": "^2.8.4",
+    "prisma": "^4.11.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.5"
+  }
+}
