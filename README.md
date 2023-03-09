@@ -2,7 +2,6 @@
 
 > Migrate database from one to another.
 
-
 ## Usage
 
 Copy `prisma/.env.sample` to `prisma/.env`.
@@ -18,6 +17,17 @@ Finally, install packages and generate [Prisma client](https://www.prisma.io/doc
 ```sh
 yarn && yarn generate
 ```
+
+## Supported databases
+
+Since the repo uses [Prisma](https://www.prisma.io), it supports [database connectors](https://www.prisma.io/docs/concepts/database-connectors) as provided.
+
+- PostgreSQL
+- MySQL
+- SQLite
+- MongoDB
+- CockroachDB
+- Microsoft SQL Server
 
 ## Write migration code
 
