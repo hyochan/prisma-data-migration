@@ -7,7 +7,7 @@
     "start": "ts-node src/index.ts",
     "lint": "eslint --ext .ts src",
     "tsc": "tsc",
-    "postinstall": "yarn prisma:db-pull:old && yarn prisma:db-pull && yarn prisma:generate:old && yarn prisma:generate",
+    "generate": "yarn prisma:db-pull:old && yarn prisma:db-pull && yarn prisma:generate:old && yarn prisma:generate",
     "prisma:db-pull:old": "prisma db pull --schema prisma/schema_old.prisma",
     "prisma:db-pull": "prisma db pull --schema prisma/schema.prisma",
     "prisma:generate:old": "prisma generate --schema prisma/schema_old.prisma",
