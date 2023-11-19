@@ -15,7 +15,7 @@ Add `DATABASE_URL_OLD`, and `DATABASE_URL` correct values as provided in [Prisma
 Finally, install packages and generate [Prisma client](https://www.prisma.io/docs/concepts/components/prisma-client).
 
 ```sh
-yarn && yarn generate
+bun install && bun generate
 ```
 
 ## Supported databases
@@ -64,4 +64,4 @@ main()
   });
 ```
 
-> After you wrote the script, run `yarn start`.
+> After you wrote the script, run `bun start`.
